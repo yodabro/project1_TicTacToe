@@ -41,9 +41,9 @@ board = {
   },
 
 
-  diagRCheck: function(row) { /* checks diagonal Right */
+  diagRCheck: function(row) { /* checks diagonal Right */ /*rewright the function needed*/
     for (var i = 0; i < this.boardArr.length; i++) {
-      if (this.boardArr[0][board].innerHTML !== this.boardArr[i][board-1-i].innerHTML || this.boardArr[0][board].innerHTML == "") {
+      if (this.boardArr[0][row].innerHTML !== this.boardArr[i][row-1-i].innerHTML || this.boardArr[0][row].innerHTML == "") {
         return false;
       }
     }
