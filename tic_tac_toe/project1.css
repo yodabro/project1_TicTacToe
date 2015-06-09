@@ -1,10 +1,7 @@
-*{
-  display: 
-}
 #board { 
   padding: 0px; 
-  margin-top: 100px; 
-  margin-left: 1000px;
+  margin-top: 5%; 
+  margin-left: 70%;
   z-index: 1;
   background-color: white;
 }
@@ -15,26 +12,54 @@
   font-family: Helvetica; 
   font-size: 30px; 
   text-align: center; 
+  background: url("http://image5.spreadshirtmedia.com/image-server/v1/compositions/105769041/views/1,width=235,height=235,appearanceId=2/Mortal-Kombat.jpg");
+  background-size: cover;
 }
 #board tr td:hover { 
-  background: #e4e4e4; 
+  background: url('http://i266.photobucket.com/albums/ii265/sony1270/mksilhouette2.png'); 
   cursor: pointer; 
+  background-size: cover;
 }
 body {
   background: url("http://wallpaper4me.com/images/wallpapers/scorpion_sub_zero_concept_w1.jpeg");
   background-size: cover;
   z-index: 2;
+  overflow: auto;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 .Player{
 position: absolute;
 }
 #Ohs{
-height: 20px;
-width: 45px;
-margin-left: 630px;
+margin-left: 40%;
+margin-top: -12%;
 }
 #Exs{
-height: 20px;
-width: 45px;
-margin-left: 160px;
+margin-left: 9%;
+margin-top: -12%;
+}
+button{
+background-position: center;
+background: url("http://i.imgur.com/koQkDZH.png");
+background-size: 110px auto;
+height: 35px;
+width: 116px;
+border-radius: 15%;
+border: solid red 3px;
+margin-left: 1070px;
+margin-top: 10px;
+position: relative;
+}
+iframe {
+  margin-left: 63%;
+  margin-top: 2%;
+}
+button:hover{
+  cursor: pointer;
+  background: url("http://i.imgur.com/V1Dxhj4.gif");
+  background-size: 100px auto;
+  background-repeat: repeat;
+  border: solid red 5px;
 }
