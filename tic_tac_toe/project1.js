@@ -43,7 +43,7 @@ board = {
 
   diagRCheck: function(row) { /* checks diagonal Right */
     for (var i = 0; i < this.boardArr.length; i++) {
-      if (this.boardArr[0][row].innerHTML !== this.boardArr[i][row - i].innerHTML || this.boardArr[0][row].innerHTML == "") {
+      if (this.boardArr[0][board].innerHTML !== this.boardArr[i][board-1-i].innerHTML || this.boardArr[0][board].innerHTML == "") {
         return false;
       }
     }
@@ -93,15 +93,17 @@ board = {
       }
       if (this.diagRCheck(i)) {
         alert("Right Cross Victory");
+      }else {
+      	(this.tieCheck());
       }
-    }
+    } 
     return null;
   },
 
   // check to see if there is tie
   tieCheck: function() {
     if (this.horizontalCheck() !== true || this.verticalCheck() !== true || this.diagLCheck() !== true || this.diagRCheck() !== true) {
-      return "Tie";
+      alert("Tie");
     }
   },
   //reseting everything
