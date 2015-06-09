@@ -14,6 +14,7 @@ board = {
 
   horizontalCheck: function(row) { /* checking horizontal squares for win */
     for (var i = 0; i < this.boardArr.length; i++) {
+    	console.log(row);
       if (this.boardArr[row][0].innerHTML !== this.boardArr[row][i].innerHTML || this.boardArr[row][0].innerHTML == "") {
         return false;
       }
@@ -41,9 +42,9 @@ board = {
   },
 
 
-  diagRCheck: function(row) { /* checks diagonal Right */ /*rewright the function needed*/
+  diagRCheck: function() { /* checks diagonal Right */ /*rewright the function needed*/
     for (var i = 0; i < this.boardArr.length; i++) {
-      if (this.boardArr[0][row].innerHTML !== this.boardArr[i][row-1-i].innerHTML || this.boardArr[0][row].innerHTML == "") {
+      if (this.boardArr[0][2].innerHTML !== this.boardArr[i][2-i].innerHTML || this.boardArr[0][2].innerHTML == "") {
         return false;
       }
     }
@@ -82,21 +83,24 @@ board = {
     for (var i = 0; i < 3; i++) {
       var x = this.horizontalCheck(i);
       var y = this.verticalCheck(i);
+      //console.log(i);
+  
       if (x) {
         alert("Flawless Victory");
       }
       if (y) {
         alert("Victory");
       }
+  }
       if (this.diagLCheck()) {
         alert("Left Cross Victory");
       }
-      if (this.diagRCheck(i)) {
+      if (this.diagRCheck()) {
         alert("Right Cross Victory");
       }else {
       	(this.tieCheck());
       }
-    } 
+    
     return null;
   },
 
