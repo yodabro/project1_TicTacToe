@@ -14,7 +14,7 @@ board = {
 
   horizontalCheck: function(row) { /* checking horizontal squares for win */
     for (var i = 0; i < this.boardArr.length; i++) {
-    	console.log(row);
+    	// console.log(row);
       if (this.boardArr[row][0].innerHTML !== this.boardArr[row][i].innerHTML || this.boardArr[row][0].innerHTML == "") {
         return false;
       }
@@ -82,9 +82,7 @@ board = {
   winnerCheck: function() {
     for (var i = 0; i < 3; i++) {
       var x = this.horizontalCheck(i);
-      var y = this.verticalCheck(i);
-      //console.log(i);
-  
+      var y = this.verticalCheck(i); 
       if (x) {
         alert("Flawless Victory");
       }
@@ -130,25 +128,6 @@ board = {
 }
 $("#button").on("click", board.reset);
 
-//to enter their own name for the game
-// enterNames= function() {
-
-//   var self = this;
-//   var nameCounter = 0;  //to store names properly
-
-//   $('input').attr('placeholder', "Please Enter Player One's Name")
-//             .on('keydown', function (e) {
-//               if(e.keyCode === 13 && nameCounter === 0) {
-//                 self.playerOneName = $('input').val();
-//                 $('input').val('')
-//                           .attr('placeholder', "Please Enter Player Two's Name");
-//                 nameCounter++;
-//               } else if(e.keyCode === 13 && nameCounter === 1) {
-//                 self.playerTwoName = $('input').val();
-//                 $('input').remove();
-//               }
-//             });
-// },
 
 
 board.setEventListener();
